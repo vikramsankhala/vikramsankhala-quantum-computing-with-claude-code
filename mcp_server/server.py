@@ -34,5 +34,12 @@ def magic_square() -> dict:
     return tools.magic_square()
 
 
+@mcp.tool()
+def e91(rounds: int = 20000, eve: bool = False, seed: int = 0) -> dict:
+    """Simulate E91 entanglement-based key distribution; returns CHSH value S, key error rate and whether S > 2."""
+    from qcwork import entanglement
+    return entanglement.e91(rounds, eve, seed)
+
+
 if __name__ == "__main__":
     mcp.run()
