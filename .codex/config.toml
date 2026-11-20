@@ -1,0 +1,4 @@
+# Codex CLI project config (trusted projects only)
+[mcp_servers.qcwork]
+command = "python"
+args = ["mcp_server/server.py"]

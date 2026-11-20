@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qcwork"
+version = "1.0.0"
+description = "Companion repository for 'Quantum Computing with Claude Code': from Hilbert space to distributed quantum systems"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Vikram Singh Sankhala", email = "vikramsankhala@gmail.com" }]
+dependencies = ["numpy>=1.26", "scipy>=1.11"]
+
+[project.optional-dependencies]
+frameworks = ["qiskit>=1.0", "qiskit-aer", "cirq-core", "pennylane"]
+qec = ["stim", "pymatching"]
+mcp = ["mcp<2"]
+dev = ["pytest>=8"]
+all = ["qcwork[frameworks,qec,mcp,dev]"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

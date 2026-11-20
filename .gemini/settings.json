@@ -1,0 +1,6 @@
+{
+  "contextFileName": ["GEMINI.md", "AGENTS.md"],
+  "mcpServers": {
+    "qcwork": { "command": "python", "args": ["mcp_server/server.py"] }
+  }
+}

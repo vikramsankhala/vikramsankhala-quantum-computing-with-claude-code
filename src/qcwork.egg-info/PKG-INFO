@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: qcwork
+Version: 1.0.0
+Summary: Companion repository for 'Quantum Computing with Claude Code': from Hilbert space to distributed quantum systems
+Author-email: Vikram Singh Sankhala <vikramsankhala@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.26
+Requires-Dist: scipy>=1.11
+Provides-Extra: frameworks
+Requires-Dist: qiskit>=1.0; extra == "frameworks"
+Requires-Dist: qiskit-aer; extra == "frameworks"
+Requires-Dist: cirq-core; extra == "frameworks"
+Requires-Dist: pennylane; extra == "frameworks"
+Provides-Extra: qec
+Requires-Dist: stim; extra == "qec"
+Requires-Dist: pymatching; extra == "qec"
+Provides-Extra: mcp
+Requires-Dist: mcp; extra == "mcp"
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Provides-Extra: all
+Requires-Dist: qcwork[dev,frameworks,mcp,qec]; extra == "all"
